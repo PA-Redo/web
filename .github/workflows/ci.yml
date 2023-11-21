@@ -32,11 +32,11 @@ jobs:
           push: true
           tags: rg.fr-par.scw.cloud/croix-rouge-redo/back:front-latest
 
-  # deploy:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Invoke deployment hook
-  #       uses: distributhor/workflow-webhook@v3
-  #       env:
-  #         webhook_url: ${{ secrets.WEBHOOK_URL }}
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invoke deployment hook
+        uses: distributhor/workflow-webhook@v3
+        env:
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
