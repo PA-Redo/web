@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  front:
+    image: rg.fr-par.scw.cloud/croix-rouge-redo/back:front-latest
+    networks:
+      - front
+      - proxy
+
+networks:
+  front:
+  proxy:
+    external: true

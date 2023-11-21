@@ -76,7 +76,7 @@ export default function ULDashboard() {
   }, [currentMonth, currentYear]);
 
   const updateTableMaxHeight = () => {
-    const calendarContainerHeight = calendarContainerRef.current.offsetHeight;
+    const calendarContainerHeight = calendarContainerRef?.current?.offsetHeight;
     const newTableMaxHeight = `${calendarContainerHeight}px`;
     setTableMaxHeight(newTableMaxHeight);
   };

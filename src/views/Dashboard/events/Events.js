@@ -70,7 +70,7 @@ export default function Events() {
     const updateTableMaxHeight = () => {
         if(calendarContainerRef.current === null) return;
         setTimeout(() => {
-            const calendarContainerHeight = calendarContainerRef.current.offsetHeight;
+            const calendarContainerHeight = calendarContainerRef?.current?.offsetHeight;
             const newTableMaxHeight = `${calendarContainerHeight}px`;
             setTableMaxHeight(newTableMaxHeight);
         }, 100);
